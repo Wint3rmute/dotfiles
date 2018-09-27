@@ -1,0 +1,8 @@
+dunst &
+compton &
+feh --bg-tile /home/wint3rmute/Pictures/wallpaper_eva.png &
+tint2 -c /home/wint3rmute/.config/tint2/tint_clock &
+tint2 -c /home/wint3rmute/.config/tint2/tint_right_panel &
+nm-applet &
+xfce4-power-manager &
+libinput-gestures &
