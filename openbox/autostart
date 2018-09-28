@@ -1,8 +1,9 @@
+feh --bg-fill /home/wint3rmute/Pictures/wallpapers/ghostinshell.jpg &
 dunst &
 compton &
-feh --bg-tile /home/wint3rmute/Pictures/wallpaper_eva.png &
-tint2 -c /home/wint3rmute/.config/tint2/tint_clock &
-tint2 -c /home/wint3rmute/.config/tint2/tint_right_panel &
+tint2 -c /home/wint3rmute/.config/tint2/clock &
+tint2 -c /home/wint3rmute/.config/tint2/tray &
 nm-applet &
 xfce4-power-manager &
+xfce4-clipman &
 libinput-gestures &

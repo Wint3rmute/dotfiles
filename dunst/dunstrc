@@ -70,7 +70,7 @@ hide_duplicates_count = yes
 # The width can be negative.  In this case the actual width is the
 # screen width minus the width defined in within the geometry option.
 #geometry = "250x50-40+40"
-geometry = "310x50+20+20"
+geometry = "310x50+16+16"
 
 # Shrink window if it's smaller than the width.  Will be ignored if
 # width is 0.
@@ -120,10 +120,11 @@ line_height = 3
 # Draw a line of "separatpr_height" pixel height between two
 # notifications.
 # Set to 0 to disable.
-separator_height = 3
+separator_height = 0
 
 # Padding between text and separator.
 padding = 6
+# margin = 10
 
 # Horizontal padding.
 horizontal_padding = 6
@@ -134,7 +135,7 @@ horizontal_padding = 6
 #  * foreground: use the same color as the foreground;
 #  * frame: use the same color as the frame;
 #  * anything else will be interpreted as a X color.
-separator_color = frame
+separator_color = frame 
 
 # Print a notification on startup.
 # This is mainly for error detection, since dbus (re-)starts dunst
@@ -155,7 +156,7 @@ max_icon_size = 80
 icon_folders = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
 
 frame_width = 3
-frame_color = "BE75CA"
+frame_color = "37474F"
 
 [shortcuts]
 
@@ -181,24 +182,21 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#5B8234"
-foreground = "#3B7C87"
-background = "#191311"
-#background = "#2B313C"
+frame_color = "#263238"
+foreground = "#ffffff"
+background = "#263238"
 timeout = 4
 
 [urgency_normal]
-frame_color = "#BE75CA"
-foreground = "#BE75CA"
-background = "#191311"
-#background = "#2B313C"
-timeout = 6
+frame_color = "#37474F"
+foreground = "#ffffff"
+background = "#37474F"
+timeout = 4
 
 [urgency_critical]
-frame_color = "#B7472A"
-foreground = "#B7472A"
-background = "#191311"
-#background = "#2B313C"
+frame_color = "#FF5370"
+foreground = "#FFFFFF"
+background = "#FF5370"
 timeout = 8
 
 

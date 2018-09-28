@@ -1,2 +1,2 @@
 # Light theme.
-rofi.theme: ~/.cache/wal/colors-rofi-light.rasi
+rofi.theme: ~/.themes/colors-rofi-light.rasi
