@@ -1,9 +1,12 @@
 feh --bg-fill /home/wint3rmute/Pictures/wallpapers/ghostinshell.jpg &
-dunst &
 compton &
+dunst &
 tint2 -c /home/wint3rmute/.config/tint2/clock &
 tint2 -c /home/wint3rmute/.config/tint2/tray &
+xinput set-prop 14 286 1 &
+libinput-gestures &
+
 nm-applet &
 xfce4-power-manager &
 xfce4-clipman &
-libinput-gestures &
+# pasystray &

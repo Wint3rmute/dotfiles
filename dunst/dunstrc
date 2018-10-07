@@ -182,9 +182,9 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#263238"
+frame_color = "#37474F"
 foreground = "#ffffff"
-background = "#263238"
+background = "#37474F"
 timeout = 4
 
 [urgency_normal]
