@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -39,7 +40,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-  '<cornerRadius>4</cornerRadius>'
+  '<cornerRadius>10</cornerRadius>'
   <name>wal</name><titleLayout/><!--
       available characters are NDSLIMC, each can occur at most once.
       N: window icon
@@ -62,10 +63,10 @@
     <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name></name>
-      <name></name>
-      <name></name>
-      <name></name>
+      <name>&#xF269;</name>
+      <name>&#xF121;</name>
+      <name>&#xF120;</name>
+      <name>&#xF144;</name>
     </names>
     <popupTime>900</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -122,7 +123,7 @@
     </keybind>
     <keybind key="NoSymbol">
       <action name="Execute">
-        <command>notify-send &quot;tete&quot;</command>
+        <command>notify-send "tete"</command>
       </action>
     </keybind>
     <keybind key="XF86PowerOff">
@@ -138,7 +139,7 @@
     </keybind>
     <keybind key="W-l">
       <action name="Execute">
-        <command>i3lock-fancy -t &quot; &quot; -- scrot -z</command>
+        <command>/home/wint3rmute/code/scripts/lock</command>
       </action>
     </keybind>
     <keybind key="W-w">
@@ -178,6 +179,9 @@
     </keybind>
     <keybind key="W-r">
       <action name="Resize"/>
+    </keybind>
+    <keybind key="W-p">
+      <action name="ToggleAlwaysOnTop"/>
     </keybind>
     <keybind key="A-Shift-Tab">
       <action name="PreviousWindow"/>
