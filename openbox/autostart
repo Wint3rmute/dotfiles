@@ -1,4 +1,4 @@
-feh --bg-fill /home/wint3rmute/Pictures/wallpapers/vera.jpg &
+feh --bg-fill /home/wint3rmute/Pictures/wallpapers/lavish_limelight.jpg &
 compton &
 dunst &
 tint2 -c /home/wint3rmute/.config/tint2/clock &
