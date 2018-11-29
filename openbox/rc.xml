@@ -226,6 +226,11 @@
         <command>xfce4-terminal</command>
       </action>
     </keybind>
+    <keybind key="A-XF86Launch1">
+      <action name="Execute">
+        <command>sh /home/wint3rmute/code/scripts/temp_screen</command>
+      </action>
+    </keybind>
     <keybind key="W-f">
       <action name="Execute">
         <command>firefox</command>
