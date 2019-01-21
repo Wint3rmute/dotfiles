@@ -9,4 +9,5 @@ libinput-gestures &
 nm-applet &
 xfce4-power-manager &
 xfce4-clipman &
+/usr/lib/kdeconnectd &
 # pasystray &
