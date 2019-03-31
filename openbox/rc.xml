@@ -161,17 +161,17 @@
     </keybind>
     <keybind key="W-s">
       <action name="Execute">
-        <command>spotify</command>
+        <command>jumpapp spotify</command>
       </action>
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>telegram-desktop</command>
+        <command>jumpapp telegram-desktop</command>
       </action>
     </keybind>
     <keybind key="W-c">
       <action name="Execute">
-        <command>code</command>
+        <command>jumpapp code</command>
       </action>
     </keybind>
     <keybind key="XF86KbdBrightnessDown">
@@ -248,7 +248,7 @@
     </keybind>
     <keybind key="W-f">
       <action name="Execute">
-        <command>firefox</command>
+        <command>jumpapp firefox</command>
       </action>
     </keybind>
     <keybind key="W-e">
