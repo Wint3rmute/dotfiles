@@ -4,10 +4,10 @@ dunst &
 tint2 -c /home/wint3rmute/.config/tint2/clock &
 tint2 -c /home/wint3rmute/.config/tint2/tray &
 xinput set-prop "ELAN1200:00 04F3:3045 Touchpad" 292 1
-libinput-gestures &
+gebaard -b
 
 nm-applet &
 xfce4-power-manager &
 xfce4-clipman &
 /usr/lib/kdeconnectd &
-# pasystray &
+thunar --daemon &
