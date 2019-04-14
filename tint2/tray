@@ -1,0 +1,28 @@
+#-------------------------------------
+# Panel
+panel_items = S
+panel_size = 100% 30
+panel_margin = 6 6
+panel_padding = 0 0 0
+panel_background_id = 1
+panel_dock = 0
+panel_position = top right vertical
+panel_layer = bottom
+panel_monitor = all
+panel_shrink = 1
+strut_policy = minimal
+panel_window_name = tint2
+mouse_effects = 1
+font_shadow = 0
+mouse_hover_icon_asb = 100 0 10
+mouse_pressed_icon_asb = 100 0 0
+
+#-------------------------------------
+# System tray (notification area)
+systray_padding = 0 0 7
+systray_background_id = 0
+systray_sort = ascending
+systray_icon_size = 60
+systray_icon_asb = 100 0 0
+systray_monitor = 1
+systray_name_filter = Clipman
