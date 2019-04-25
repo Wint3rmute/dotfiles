@@ -677,6 +677,7 @@
     
     </application>
 
+    <!--
     <application title="Unnamed Window">
       <position force="yes">
         <x>600</x>
@@ -692,7 +693,7 @@
     <desktop>4</desktop>
     
     </application>
-
+    -->
 <application title="Mozilla Firefox">
       <position force="yes">
         <x>0</x>

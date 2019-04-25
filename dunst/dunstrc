@@ -53,7 +53,7 @@ word_wrap = yes
 ignore_newline = no
 
 # Hide duplicate's count and stack them
-stack_duplicates = yes
+stack_duplicates = no
 hide_duplicates_count = yes
 
 
