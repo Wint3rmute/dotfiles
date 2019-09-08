@@ -1,8 +1,9 @@
-feh --bg-fill /home/wint3rmute/Pictures/wallpapers/lavish_limelight.jpg &
+feh --bg-fill /home/wint3rmute/Pictures/wallpapers/vera.jpg &
 compton &
 dunst &
 tint2 -c /home/wint3rmute/.config/tint2/clock &
 tint2 -c /home/wint3rmute/.config/tint2/tray &
+sh ~/.config/words_engine/words_engine >> ~/.asdflog & 
 xinput set-prop "ELAN1200:00 04F3:3045 Touchpad" 292 1
 gebaard -b
 

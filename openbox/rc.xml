@@ -142,6 +142,11 @@
         <command>rofi -show Action -modi Action:/home/wint3rmute/code/scripts/rofi-shutdown-menu.sh -lines 5</command>
       </action>
     </keybind>
+    <keybind key="W-a">
+      <action name="Execute">
+        <command>rofi -show Action -modi Action:/home/wint3rmute/code/scripts/emojis</command>
+      </action>
+    </keybind>
     <keybind key="W-Up">
       <action name="ToggleMaximizeFull"/>
     </keybind>
@@ -223,7 +228,7 @@
         <command>rofi -show drun</command>
       </action>
     </keybind>
-    <keybind key="A-F4">
+    <keybind key="A-F12">
       <action name="Close"/>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
@@ -677,8 +682,8 @@
     
     </application>
 
-    <!--
-    <application title="Unnamed Window">
+    
+    <application class="Spotify">
       <position force="yes">
         <x>600</x>
         <y>150</y>
@@ -693,7 +698,7 @@
     <desktop>4</desktop>
     
     </application>
-    -->
+ 
 <application title="Mozilla Firefox">
       <position force="yes">
         <x>0</x>

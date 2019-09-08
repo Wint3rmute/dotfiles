@@ -7,5 +7,5 @@ right = "xdotool key ctrl+alt+Right"
 [commands.swipe.four]
 up = "xdotool key XF86AudioRaiseVolume"
 down = "xdotool key XF86AudioLowerVolume"
-left = "playerctl next"
-right = "playerctl previous"
+left = "playerctl previous"
+right = "playerctl next"
