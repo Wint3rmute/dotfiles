@@ -9,6 +9,5 @@ gebaard -b
 
 nm-applet &
 xfce4-power-manager &
-xfce4-clipman &
 /usr/lib/kdeconnectd &
 thunar --daemon &
