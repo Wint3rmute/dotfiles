@@ -1,5 +1,5 @@
 feh --bg-fill /home/wint3rmute/Pictures/wallpapers/vera.jpg &
-compton &
+picom &
 dunst &
 tint2 -c /home/wint3rmute/.config/tint2/clock &
 tint2 -c /home/wint3rmute/.config/tint2/tray &

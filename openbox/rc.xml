@@ -120,6 +120,24 @@
     <keybind key="C-A-Left">
       <action name="DesktopLeft"/>
     </keybind>
+    <keybind key="W-1">
+      <action name="Desktop"/>
+    </keybind>
+    <keybind key="W-2">
+      <action name="Desktop">
+        <desktop>2</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-3">
+      <action name="Desktop">
+        <desktop>3</desktop>
+      </action>
+    </keybind>
+    <keybind key="W-4">
+      <action name="Desktop">
+        <desktop>4</desktop>
+      </action>
+    </keybind>
     <keybind key="A-XF86AudioNext">
       <action name="DirectionalFocusEast"/>
     </keybind>
@@ -242,6 +260,11 @@
       </action>
     </keybind>
     <keybind key="XF86Launch1">
+      <action name="Execute">
+        <command>alacritty</command>
+      </action>
+    </keybind>
+    <keybind key="W-Return">
       <action name="Execute">
         <command>alacritty</command>
       </action>

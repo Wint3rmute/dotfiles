@@ -21,7 +21,9 @@ mouse_pressed_icon_asb = 100 0 0
 #-------------------------------------
 # Clock
 time1_format = - %H:%M -
-time1_font = Monospace Regular bold
+time1_font = Noto Sans Mono Medium 
+
+#time1_font = Monospace Regular bold
 
 # time2_format = %A %d %B
 time1_timezone = 
