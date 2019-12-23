@@ -30,13 +30,16 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty 
+
+border_radius 10
 
 # kill focused window
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show drun 
+# bindsym $mod+d exec rofi -show drun 
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -136,6 +139,36 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+
+bindsym $mod+z gaps inner current plus 10
+bindsym $mod+x gaps inner current minus 10
+
+
+bindsym XF86AudioRaiseVolume exec "~/code/scripts/volume up"
+bindsym XF86AudioLowerVolume exec "~/code/scripts/volume down"
+
+
+bindsym XF86KbdBrightnessUp exec "~/code/scripts/keyboard 3"
+bindsym XF86KbdBrightnessDown exec "~/code/scripts/keyboard 0"
+
+
+bindsym XF86MonBrightnessUp exec "~/code/scripts/brightness up"
+bindsym XF86MonBrightnessDown exec "~/code/scripts/brightness down"
+
+bindsym XF86PowerOff exec "rofi -show Action -modi Action:/home/wint3rmute/code/scripts/rofi-shutdown-menu.sh -lines 5"
+
+
+# Switching next/previous workspaces
+bindsym Ctrl+Mod1+Right workspace next
+bindsym Ctrl+Mod1+Left workspace prev
+
+# Moving windows to next/previous workspaces
+bindsym Shift+Mod1+Right move container to workspace right
+bindsym Shift+Mod1+Left move container to workspace prev
+ 
+
+
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -144,16 +177,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym l resize shrink height 5 px or 5 ppt
+        bindsym semicolon resize grow width 10 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -163,18 +196,47 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+
+# COLORS
+
+client.focused          #263238 #263238 #FFFFFF #263238   #263238
+client.focused_inactive #263238 #263238 #FFFFFF #263238   #263238
+client.unfocused        #263238 #263238 #888888 #263238   #263238
+client.urgent           #263238 #263238 #FFFFFF #263238   #263238
+client.placeholder      #263238 #263238 #FFFFFF #263238   #263238
+
+client.background       #FFFFFF
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-}
+#bar {
+#  colors {
+#    background #263238
+#    statusline #FFFFFF
+#    separator  #666666
 
+#    focused_workspace  #37474F #37474F #FFFFFF
+#    active_workspace   #263238 #263238 #FFFFFF
+#    inactive_workspace #263238 #263238 #888888
+#    urgent_workspace   #FF5370 #FF5370 #FFFFFF
+#    binding_mode       #263238 #263238 #FFFFFF
+#  }
 
+#  position top
+#  status_command i3status
+#}
+
+bindsym $mod+d exec "dmenu_run -fn 'Noto Sans Mono-12' -nf '#FFFFFF' -nb '#263238' -sb '#37474F' -sf '#FFFFFF' -p 'Launch'"
+
+exec_always polybar example
+#gaps top 30
+gaps top -3
+gaps bottom -3
 gaps inner 20
 new_window 1pixel
 
-exec_always feh --bg-fill /home/wint3rmute/Pictures/wallpapers/lavish_limelight.jpg
-exec_always compton
+exec_always feh --bg-fill /home/wint3rmute/Pictures/wallpapers/vera.jpg
+exec_always picom 
 exec-always gebaard -b
 exec_always dunst
 #exec_always tint2 -c /home/wint3rmute/.config/tint2/clock
@@ -183,7 +245,7 @@ exec_always xinput set-prop "ELAN1200:00 04F3:3045 Touchpad" 292 1
 exec_always nm-applet
 exec_always xfce4-power-manager
 exec_always xfce4-clipman 
-exec /usr/lib/kdeconnectd
+# exec /usr/lib/kdeconnectd
 
 
 
