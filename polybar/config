@@ -144,7 +144,7 @@ type = custom/script
 ; Available tokens:
 ;   %counter%
 ; Command to be executed (using "/usr/bin/env sh -c [command]")
-exec = get_random_excellent_word 
+exec = ~/code/scripts/get_random_excellent_word 
 
 ; Will the script output continous content?
 ; Default: false
