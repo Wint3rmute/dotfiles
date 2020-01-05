@@ -321,6 +321,11 @@
         <command>~/code/scripts/tiler</command>
       </action>
     </keybind>
+    <keybind key="S-W-space">
+      <action name="Execute">
+        <command>~/code/scripts/tiler big</command>
+      </action>
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>

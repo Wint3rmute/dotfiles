@@ -16,6 +16,8 @@
 ;
 ;==========================================================
 
+
+
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #00000000 
@@ -35,6 +37,10 @@ height = 28
 offset-y = 1%
 ;radius = 10.0
 fixed-center = true
+
+dpi=100
+;dpi-y = 20
+;dpi-x = 20
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -62,7 +68,7 @@ modules-right = date
 padding-right = 8
 tray-detached = true 
 tray-position = right 
-;tray-offset-x = -0
+tray-offset-y = -3
 tray-padding = 9
 tray-underline = #fff
 tray-scale = 1
