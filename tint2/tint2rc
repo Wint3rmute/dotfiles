@@ -20,7 +20,6 @@ mouse_pressed_icon_asb = 100 0 0
 
 #-------------------------------------
 # Clock
-time1_format = "De iure"  
 time1_font = Monospace Regular bold 14
 
 # time2_format = %A %d %B
@@ -31,3 +30,6 @@ clock_padding = 2 0
 clock_tooltip = 
 clock_tooltip_timezone = 
 clock_lclick_command = 
+
+
+time1_format = "De iure"  

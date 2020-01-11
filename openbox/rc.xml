@@ -323,7 +323,7 @@
     </keybind>
     <keybind key="S-W-space">
       <action name="Execute">
-        <command>~/code/scripts/tiler big</command>
+        <command>~/code/scripts/tiler small</command>
       </action>
     </keybind>
   </keyboard>
