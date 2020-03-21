@@ -117,9 +117,6 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-    <keybind key="C-A-Left">
-      <action name="DesktopLeft"/>
-    </keybind>
     <keybind key="W-1">
       <action name="Desktop"/>
     </keybind>
@@ -211,9 +208,6 @@
       <action name="Execute">
         <command>/home/wint3rmute/code/scripts/brightness down</command>
       </action>
-    </keybind>
-    <keybind key="C-A-Right">
-      <action name="DesktopRight"/>
     </keybind>
     <keybind key="S-A-Left">
       <action name="SendToDesktopLeft"/>
