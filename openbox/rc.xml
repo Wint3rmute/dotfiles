@@ -169,7 +169,9 @@
       </action>
     </keybind>
     <keybind key="W-w">
-      <action name="ToggleDecorations"/>
+      <action name="Execute">
+        <command>~/code/scripts/weather</command>
+      </action>
     </keybind>
     <keybind key="W-q">
       <action name="Close"/>
@@ -265,7 +267,7 @@
     </keybind>
     <keybind key="W-f">
       <action name="Execute">
-        <command>jumpapp brave</command>
+        <command>jumpapp firefox</command>
       </action>
     </keybind>
     <keybind key="W-e">
