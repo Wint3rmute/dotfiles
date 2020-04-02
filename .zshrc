@@ -17,8 +17,53 @@ export LESS_TERMCAP_us=$'\e[1;4;32m'
 
 alias vim=nvim
 
+# AK2
+
+asm() {
+	[ -z $1 ] && echo No input provided && return 
+
+	src=$1
+	name="${src%%.*}"
+	
+	as $src -o $name.o && ld $name.o -o $name
+}
+
+asmr() {
+	src=$1
+	asm $1 && echo Running $name && ./$name
+}
+
+sshh () {
+	result=255
+
+	while true 
+	do
+		ssh $*
+		result=$?
+		[ $result = 0 -o $result = 130 ] && return 0
+
+		echo Result $result
+		sleep 1
+	done
+}
+
 # Python workflow
-alias setupvenv="rm -rf venv && virtualenv venv && . venv/bin/activate && pip install -r requirements.txt"
+setupvenv() {
+
+	[[ $1 = '-h' || $1 == '--help' ]] &&
+		echo Usage: setupvenv [ FOLDER_NAME ] [ PYTHON_EXEC ] &&
+		echo
+		echo FOLDER_NAME the folder in which the venv will be created
+		echo PYTHON_EXEC the version of python to use, eg. python3, python2, python3.5
+
+		return
+
+
+	rm -rf venv;
+	virtualenv venv;
+	. venv/bin/activate;
+	pip install -r requirements.txt;
+}
 alias venv=". venv/bin/activate"
 
 # Moar speed
@@ -62,8 +107,11 @@ antigen bundle git
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Load the theme.
-antigen theme robbyrussell
 
+#antigen bundle /home/wint3rmute/.antigen/customrussell/oh-my-zsh/themes customrussell.zsh-theme --no-local-clone
+antigen bundle /home/wint3rmute/.antigen/customrussell/ customrussell.zsh-theme --no-local-clone
+# Load the theme.
+# antigen theme robbyrussell
+antigen theme customrussell
 # Tell Antigen that you're done.
 antigen apply
