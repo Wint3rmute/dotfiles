@@ -309,12 +309,12 @@
     </keybind>
     <keybind key="W-space">
       <action name="Execute">
-        <command>~/code/scripts/tiler</command>
+        <command>/usr/bin/tiler small</command>
       </action>
     </keybind>
     <keybind key="S-W-space">
       <action name="Execute">
-        <command>~/code/scripts/tiler small</command>
+        <command>/usr/bin/tiler</command>
       </action>
     </keybind>
   </keyboard>
