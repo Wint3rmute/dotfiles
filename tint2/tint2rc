@@ -32,4 +32,4 @@ clock_tooltip_timezone =
 clock_lclick_command = 
 
 
-time1_format = "De iure"  
+time1_format = "De iure" - syf

@@ -109,9 +109,12 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 
 #antigen bundle /home/wint3rmute/.antigen/customrussell/oh-my-zsh/themes customrussell.zsh-theme --no-local-clone
-antigen bundle /home/wint3rmute/.antigen/customrussell/ customrussell.zsh-theme --no-local-clone
+# antigen bundle /home/wint3rmute/.antigen/customrussell/ customrussell.zsh-theme --no-local-clone
 # Load the theme.
-# antigen theme robbyrussell
-antigen theme customrussell
+antigen theme robbyrussell
+# antigen theme customrussell
 # Tell Antigen that you're done.
 antigen apply
+
+
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then exec startx; fi
