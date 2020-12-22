@@ -1,10 +1,12 @@
 # Don't print a new line at the start of the prompt
 add_newline = false
 
-# Which is equivalent to
+
+# Use custom format
 format = """
 $username\
 $hostname\
+$shlvl\
 $directory\
 $git_branch\
 $git_commit\
@@ -12,11 +14,24 @@ $git_state\
 $git_status\
 $python\
 $rust\
+$nix_shell\
+$memory_usage\
+$env_var\
 $cmd_duration\
 $custom\
 $jobs\
-$battery\
 $time\
 $status\
 $character"""
+
+[directory]
+truncation_length = 8
+
+[git_branch]
+truncation_length = 35
+
+[python]
+disabled = false
+style = "green bold"
+scan_for_pyfiles = false
 
