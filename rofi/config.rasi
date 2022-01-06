@@ -1,3 +1,2 @@
-configuration {
-	theme: "~/.themes/colors-rofi-light.rasi";
-}
+@theme "~/.themes/colors-rofi-light.rasi"
+
