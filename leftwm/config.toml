@@ -11,6 +11,36 @@ focus_new_windows = true
 
 [[keybind]]
 command = "Execute"
+value = "flameshot gui"
+modifier = []
+key = "Print"
+
+[[keybind]]
+command = "Execute"
+value = "~/code/scripts/brightness up"
+modifier = []
+key = "XF86XK_MonBrightnessUp"
+
+[[keybind]]
+command = "Execute"
+value = "~/code/scripts/brightness down"
+modifier = []
+key = "XF86XK_MonBrightnessDown"
+
+[[keybind]]
+command = "Execute"
+value = "~/code/scripts/volume up"
+modifier = []
+key = "XF86XK_AudioRaiseVolume"
+
+[[keybind]]
+command = "Execute"
+value = "~/code/scripts/volume down"
+modifier = []
+key = "XF86XK_AudioLowerVolume"
+
+[[keybind]]
+command = "Execute"
 value = "rofi -show drun"
 modifier = ["modkey"]
 key = "d"
