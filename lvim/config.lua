@@ -13,7 +13,6 @@ lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "material"
 -- lvim.colorscheme = "onedarker"
---lvim.colorscheme = "oceanic"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -54,29 +53,6 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 --   w = { "<cmd>Trouble lsp_workspace_diagnostics<cr>", "Diagnostics" },
 -- }
 
--- Window manipulations
-lvim.builtin.which_key.mappings["w"] = {
-  name = "+window",
-  v = { "<cmd>vsplit<cr>",   "Vertical split" },
-  s = { "<cmd>split<cr>",    "Horizontal split" },
-  w = { "<cmd>wincmd p<cr>", "Focus last window" },
-  h = { "<cmd>wincmd h<cr>", "Focus left" },
-  j = { "<cmd>wincmd j<cr>", "Focus down" },
-  k = { "<cmd>wincmd k<cr>", "Focus up" },
-  l = { "<cmd>wincmd l<cr>", "Focus right" },
-  H = { "<cmd>wincmd H<cr>", "Move window left-most" },
-  J = { "<cmd>wincmd J<cr>", "Move window down-most" },
-  K = { "<cmd>wincmd K<cr>", "Move window up-most" },
-  L = { "<cmd>wincmd L<cr>", "Move window right-most" },
-  t = { "<cmd>wincmd T<cr>", "Move window to a new tab" },
-  o = { "<cmd>only<cr>",     "Make current window the only one" },
-  q = { "<cmd>hide<cr>",     "Close the window unless it's the only one" },
-  r = { "<cmd>wincmd r<cr>", "Rotate windows" },
-  m = { "<cmd>wincmd |<cr>", "Maximize current window" },
-  R = { "<cmd>wincmd =<cr>", "Reset windows to equal sizes" },
-}
-
-
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
 lvim.builtin.dashboard.active = true
@@ -84,6 +60,9 @@ lvim.builtin.notify.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
+lvim.builtin.nvimtree.setup.view.auto_resize = true
+vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
+vim.opt.ignorecase = true
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -96,7 +75,6 @@ lvim.builtin.treesitter.ensure_installed = {
   "typescript",
   "css",
   "rust",
-  "java",
   "yaml",
 }
 
@@ -163,12 +141,6 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- Additional Plugins
 lvim.plugins = {
   {"marko-cerovac/material.nvim"},
-  {"mhartington/oceanic-next"},
-    -- {"folke/tokyonight.nvim"},
-    -- {
-    --   "folke/trouble.nvim",
-    --   cmd = "TroubleToggle",
-    -- },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
