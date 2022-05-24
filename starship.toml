@@ -33,5 +33,4 @@ truncation_length = 35
 [python]
 disabled = false
 style = "green bold"
-scan_for_pyfiles = false
 
