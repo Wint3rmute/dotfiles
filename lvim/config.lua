@@ -8,11 +8,15 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
+lvim.builtin.lualine.style = "default" -- or "none"
+
 -- general
 lvim.log.level = "warn"
 -- lvim.format_on_save = true
 lvim.format_on_save = true
 lvim.colorscheme = "material"
+
+vim.o.guifont = "FiraCode Nerd Font:h7"
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
@@ -144,7 +148,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- Additional Plugins
 lvim.plugins = {
-  {"marko-cerovac/material.nvim"},
+  { "marko-cerovac/material.nvim" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
