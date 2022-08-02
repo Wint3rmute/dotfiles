@@ -32,13 +32,17 @@ function os.capture(cmd, raw)
 end
 
 local hostname = os.capture("hostname")
-vim.notify("Using config for " .. hostname, vim.log.levels.INFO, { ["title"] = "Config" })
 
 if hostname == "wint3rmute.satrevolution"
 then
   vim.o.guifont = "Fira Code:h8.9"
 end
 
+if hostname == "x260"
+then
+  vim.notify("Using config for " .. hostname, vim.log.levels.INFO, { ["title"] = "Config" })
+  vim.o.guifont = "FiraCode Nerd Font:h7"
+end
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
