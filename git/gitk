@@ -1,0 +1,64 @@
+set mainfont {FiraCode 10}
+set textfont {FiraCode 10}
+set uifont {FiraCode 10 bold}
+set tabstop 4
+set findmergefiles 0
+set maxgraphpct 50
+set maxwidth 30
+set cmitmode patch
+set wrapcomment none
+set autoselect 1
+set autosellen 40
+set showneartags 1
+set maxrefs 20
+set visiblerefs {"master"}
+set hideremotes 0
+set showlocalchanges 1
+set datetimeformat {%Y-%m-%d %H:%M:%S}
+set limitdiffs 1
+set uicolor #263238
+set want_ttk 0
+set bgcolor #263238
+set fgcolor #f8f8f2
+set uifgcolor #f8f8f2
+set uifgdisabledcolor #6272a4
+set colors {#C3E88D #FF5370 #C792EA #BB80B3 #f8f8f8 #F78C6C #F78C6C}
+set diffcolors {#FF5370 #C3E88D #C792EA}
+set mergecolors {#FF5370 #C792EA #C3E88D #C792EA #F78C6C #89DDFF #BB80B3 #f1fa8c #89DDFF #BB80B3 #89DDFF #F78C6C #89DDFF #C3E88D #F78C6C #C792EA}
+set markbgcolor #282a36
+set diffcontext 3
+set selectbgcolor #44475a
+set foundbgcolor #C3E88D
+set currentsearchhitbgcolor #F78C6C
+set extdifftool meld
+set perfile_attrs 0
+set headbgcolor #C3E88D
+set headfgcolor black
+set headoutlinecolor #f8f8f2
+set remotebgcolor #F78C6C
+set tagbgcolor #f1fa8c
+set tagfgcolor black
+set tagoutlinecolor #f8f8f2
+set reflinecolor #f8f8f2
+set filesepbgcolor #44475a
+set filesepfgcolor #f8f8f2
+set linehoverbgcolor #f1fa8c
+set linehoverfgcolor black
+set linehoveroutlinecolor #f8f8f2
+set mainheadcirclecolor #f1fa8c
+set workingfilescirclecolor #FF5370
+set indexcirclecolor #C3E88D
+set circlecolors {#282a36 #bd93f9 #44475a #bd93f9 #bd93f9}
+set linkfgcolor #C792EA
+set circleoutlinecolor #44475a
+set diffbgcolors {{#342a36} #283636}
+set web_browser xdg-open
+set geometry(main) 1375x1349+25+25
+set geometry(state) normal
+set geometry(topwidth) 1373
+set geometry(topheight) 255
+set geometry(pwsash0) "73 1"
+set geometry(pwsash1) "110 1"
+set geometry(botwidth) 550
+set geometry(botheight) 1082
+set permviews {}
