@@ -12,6 +12,7 @@ lvim.builtin.lualine.style = "default" -- or "none"
 
 -- general
 lvim.log.level = "warn"
+-- lvim.format_on_save = false
 lvim.format_on_save = true
 lvim.colorscheme = "material"
 -- keymappings [view all the defaults by pressing <leader>Lk]
@@ -31,11 +32,17 @@ function os.capture(cmd, raw)
   return s
 end
 
-local hostname = os.capture("hostname")
+local hostname = os.capture("cat /etc/hostname")
 
 if hostname == "wint3rmute.satrevolution"
 then
   vim.o.guifont = "Fira Code:h8.9"
+end
+
+if hostname == "arch553ve"
+then
+  vim.notify("Using config for " .. hostname, vim.log.levels.INFO, { ["title"] = "Config" })
+  vim.o.guifont = "Fira Code:h7.5"
 end
 
 if hostname == "x260"
@@ -161,6 +168,7 @@ formatters.setup {
 -- Additional Plugins
 lvim.plugins = {
   { "marko-cerovac/material.nvim" },
+  { "norcalli/nvim-colorizer.lua" },
 }
 
 -- vim.api.nvim_create_autocmd("BufEnter", {
