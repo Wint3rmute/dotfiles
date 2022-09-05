@@ -2,12 +2,17 @@ modkey = "Mod4"
 mousekey = "Mod4"
 workspaces = []
 tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-layouts = ["MainAndVertStack", "MainAndHorizontalStack", "MainAndDeck", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMain", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
+layouts = ["MainAndVertStack", "GridHorizontal", "EvenHorizontal", "EvenVertical", "Fibonacci", "CenterMainBalanced", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
 layout_mode = "Workspace"
 scratchpad = []
 disable_current_tag_swap = false
 focus_behaviour = "Sloppy"
 focus_new_windows = true
+
+[[keybind]]
+command = "NextLayout"
+modifier = ["modkey"]
+key = "t"
 
 [[keybind]]
 command = "Execute"
@@ -53,7 +58,7 @@ key = "e"
 
 [[keybind]]
 command = "Execute"
-value = "alacritty"
+value = "kitty"
 #value = "st"
 modifier = ["modkey"]
 key = "Return"
