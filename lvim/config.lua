@@ -75,6 +75,7 @@ end
 
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["E"] = { "<cmd>PathfinderExplain<CR>", "Pathfinder explain"  }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -169,6 +170,7 @@ formatters.setup {
 lvim.plugins = {
   { "marko-cerovac/material.nvim" },
   { "norcalli/nvim-colorizer.lua" },
+  { "danth/pathfinder.vim" },
 }
 
 -- vim.api.nvim_create_autocmd("BufEnter", {
