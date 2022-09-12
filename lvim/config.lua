@@ -8,7 +8,7 @@ an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 
-lvim.builtin.lualine.style = "default" -- or "none"
+lvim.builtin.lualine.style = "default" -- or "none-- "
 
 -- general
 lvim.log.level = "warn"
@@ -21,10 +21,13 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.builtin.nvimtree.setup.actions.open_file.resize_window = true
 
+vim.cmd("let g:hardtime_default_on = 1")
+-- vim.opt.scrolloff = 100  -- todo: set
+-- vim.cmd("")
+
 function os.capture(cmd, raw)
   local f = assert(io.popen(cmd, 'r'))
-  local s = assert(f:read('*a'))
-  f:close()
+  local s = assert(f:read('*a')) f:close()
   if raw then return s end
   s = string.gsub(s, '^%s+', '')
   s = string.gsub(s, '%s+$', '')
@@ -171,6 +174,7 @@ lvim.plugins = {
   { "marko-cerovac/material.nvim" },
   { "norcalli/nvim-colorizer.lua" },
   { "danth/pathfinder.vim" },
+  { "takac/vim-hardtime" }
 }
 
 -- vim.api.nvim_create_autocmd("BufEnter", {
