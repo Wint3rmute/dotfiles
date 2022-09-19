@@ -21,9 +21,11 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.builtin.nvimtree.setup.actions.open_file.resize_window = true
-vim.cmd(":set relativenumber")
--- vim.opt.scrolloff = 100  -- todo: set
--- vim.cmd("")
+lvim.opt.relativenumber = true
+
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+
 
 function os.capture(cmd, raw)
   local f = assert(io.popen(cmd, 'r'))
@@ -179,7 +181,7 @@ lvim.plugins = {
     requires = "nvim-lua/plenary.nvim",
     config = function()
       log.warn("nvim coverage się ładuje m0rdo")
-       vim.notify("Setup vim coverage", { ["title"] = "Config" })
+      vim.notify("Setup vim coverage", { ["title"] = "Config" })
       require("user.coverage").setup()
     end,
   },
