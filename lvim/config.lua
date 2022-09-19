@@ -14,26 +14,29 @@ lvim.builtin.lualine.style = "default" -- or "none-- "
 lvim.log.level = "warn"
 -- lvim.format_on_save = false
 lvim.format_on_save = true
+-- lvim.format_on_save = false
 lvim.colorscheme = "material"
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.builtin.nvimtree.setup.actions.open_file.resize_window = true
-
-vim.cmd("let g:hardtime_default_on = 1")
+vim.cmd(":set relativenumber")
 -- vim.opt.scrolloff = 100  -- todo: set
 -- vim.cmd("")
 
 function os.capture(cmd, raw)
   local f = assert(io.popen(cmd, 'r'))
-  local s = assert(f:read('*a')) f:close()
+  local s = assert(f:read('*a'))
+  f:close()
   if raw then return s end
   s = string.gsub(s, '^%s+', '')
   s = string.gsub(s, '%s+$', '')
   s = string.gsub(s, '[\n\r]+', ' ')
   return s
 end
+
+local log = require("packer.log")
 
 local hostname = os.capture("cat /etc/hostname")
 
@@ -78,7 +81,7 @@ end
 
 -- Use which-key to add extra bindings with the leader-key prefix
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
-lvim.builtin.which_key.mappings["E"] = { "<cmd>PathfinderExplain<CR>", "Pathfinder explain"  }
+lvim.builtin.which_key.mappings["E"] = { "<cmd>PathfinderExplain<CR>", "Pathfinder explain" }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -124,7 +127,6 @@ lvim.lsp.automatic_servers_installation = true
 -- vim.tbl_map(function(server)
 --   return server ~= "emmet_ls"
 -- end, lvim.lsp.automatic_configuration.skipped_servers)
-
 -- -- you can set a custom on_attach function that will be used for all the language servers
 -- -- See <https://github.com/neovim/nvim-lspconfig#keybindings-and-completion>
 -- lvim.lsp.on_attach_callback = function(client, bufnr)
@@ -173,13 +175,30 @@ formatters.setup {
 lvim.plugins = {
   { "marko-cerovac/material.nvim" },
   { "norcalli/nvim-colorizer.lua" },
-  { "danth/pathfinder.vim" },
-  { "takac/vim-hardtime" }
+  { "andythigpen/nvim-coverage",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      log.warn("nvim coverage się ładuje m0rdo")
+       vim.notify("Setup vim coverage", { ["title"] = "Config" })
+      require("user.coverage").setup()
+    end,
+  },
+  -- { "danth/pathfinder.vim" },
+  -- { "takac/vim-hardtime" }
 }
 
--- vim.api.nvim_create_autocmd("BufEnter", {
---   pattern = { "*.py" },
---   callback = function()
---     vim.notify("Code rated 2/10: written by Bączek", vim.log.levels.ERROR, { title = "PyLint" })
---   end
--- })
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { "*.py" },
+  callback = function()
+    local cov = require("coverage")
+    cov.setup({
+      coverage_file = "coverage.json"
+    })
+
+    cov.load(true)
+
+    -- vim.defer_fn(function()
+    --   cov.show()
+    -- end, 500)
+  end
+})
