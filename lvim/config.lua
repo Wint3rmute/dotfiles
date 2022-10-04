@@ -10,6 +10,9 @@ an executable
 
 lvim.builtin.lualine.style = "default" -- or "none-- "
 
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+
 -- general
 lvim.log.level = "warn"
 -- lvim.format_on_save = false
@@ -56,7 +59,7 @@ end
 if hostname == "x260"
 then
   vim.notify("Using config for " .. hostname, vim.log.levels.INFO, { ["title"] = "Config" })
-  vim.o.guifont = "FiraCode Nerd Font:h7"
+  vim.o.guifont = "Fira Code:h6"
 end
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
