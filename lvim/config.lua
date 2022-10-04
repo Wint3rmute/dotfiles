@@ -24,7 +24,7 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 lvim.builtin.nvimtree.setup.actions.open_file.resize_window = true
-lvim.opt.relativenumber = true
+-- lvim.opt.relativenumber = true
 
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
@@ -41,8 +41,6 @@ function os.capture(cmd, raw)
   return s
 end
 
-local log = require("packer.log")
-
 local hostname = os.capture("cat /etc/hostname")
 
 if hostname == "wint3rmute.satrevolution"
@@ -52,14 +50,14 @@ end
 
 if hostname == "arch553ve"
 then
-  vim.notify("Using config for " .. hostname, vim.log.levels.INFO, { ["title"] = "Config" })
+  -- vim.notify("Using config for " .. hostname, vim.log.levels.INFO, { ["title"] = "Config" })
   vim.o.guifont = "Fira Code:h7.5"
 end
 
 if hostname == "x260"
 then
-  vim.notify("Using config for " .. hostname, vim.log.levels.INFO, { ["title"] = "Config" })
-  vim.o.guifont = "Fira Code:h6"
+  -- vim.notify("Using config for " .. hostname, vim.log.levels.INFO, { ["title"] = "Config" })
+  vim.o.guifont = "Fira Code:h6.5"
 end
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
@@ -118,8 +116,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- generic LSP settings
 
--- ---@usage disable automatic installation of servers
-lvim.lsp.automatic_servers_installation = true
+lvim.lsp.installer.setup.automatic_installation = true
 
 -- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
@@ -183,7 +180,6 @@ lvim.plugins = {
   { "andythigpen/nvim-coverage",
     requires = "nvim-lua/plenary.nvim",
     config = function()
-      log.warn("nvim coverage się ładuje m0rdo")
       vim.notify("Setup vim coverage", { ["title"] = "Config" })
       require("user.coverage").setup()
     end,
@@ -192,18 +188,18 @@ lvim.plugins = {
   -- { "takac/vim-hardtime" }
 }
 
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*.py" },
-  callback = function()
-    local cov = require("coverage")
-    cov.setup({
-      coverage_file = "coverage.json"
-    })
+-- vim.api.nvim_create_autocmd("BufEnter", {
+--   pattern = { "*.py" },
+--   callback = function()
+--     local cov = require("coverage")
+--     cov.setup({
+--       coverage_file = "coverage.json"
+--     })
 
-    cov.load(true)
+--     cov.load(true)
 
-    -- vim.defer_fn(function()
-    --   cov.show()
-    -- end, 500)
-  end
-})
+--     -- vim.defer_fn(function()
+--     --   cov.show()
+--     -- end, 500)
+--   end
+-- })
