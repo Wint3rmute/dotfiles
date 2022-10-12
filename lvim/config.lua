@@ -28,6 +28,7 @@ vim.opt.relativenumber = true
 
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+vim.cmd(":tnoremap <Esc> <C-\\><C-n>")
 
 function os.capture(cmd, raw)
   local f = assert(io.popen(cmd, 'r'))
