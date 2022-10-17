@@ -57,7 +57,7 @@ end
 if hostname == "x260"
 then
   -- vim.notify("Using config for " .. hostname, vim.log.levels.INFO, { ["title"] = "Config" })
-  vim.o.guifont = "Fira Code:h6.5"
+  vim.o.guifont = "Fira Code:h6.2"
 end
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
