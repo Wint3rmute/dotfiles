@@ -88,12 +88,12 @@ lvim.builtin.which_key.mappings["E"] = { "<cmd>PathfinderExplain<CR>", "Pathfind
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.alpha.active = true
-lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
-lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.setup.view.side = "left"
+lvim.builtin.alpha.active                           = true
+lvim.builtin.alpha.mode                             = "dashboard"
+lvim.builtin.terminal.active                        = true
+lvim.builtin.nvimtree.setup.view.side               = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
+lvim.builtin.terminal.open_mapping                  = "<c-t>"
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
@@ -116,7 +116,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 -- generic LSP settings
 
-lvim.lsp.installer.setup.automatic_installation = true
+-- lvim.lsp.installer.setup.automatic_installation = true
 
 -- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
 -- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
@@ -177,13 +177,6 @@ formatters.setup {
 lvim.plugins = {
   { "marko-cerovac/material.nvim" },
   { "norcalli/nvim-colorizer.lua" },
-  { "andythigpen/nvim-coverage",
-    requires = "nvim-lua/plenary.nvim",
-    config = function()
-      vim.notify("Setup vim coverage", { ["title"] = "Config" })
-      require("user.coverage").setup()
-    end,
-  },
   -- { "danth/pathfinder.vim" },
   -- { "takac/vim-hardtime" }
 }
