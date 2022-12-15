@@ -175,10 +175,16 @@ formatters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
-  { "marko-cerovac/material.nvim" },
+  { "marko-cerovac/material.nvim",
+    config = function()
+      require('material').setup({
+        disable = {
+          background = true
+        }
+      })
+    end
+  },
   { "norcalli/nvim-colorizer.lua" },
-  -- { "danth/pathfinder.vim" },
-  -- { "takac/vim-hardtime" }
 }
 
 -- vim.api.nvim_create_autocmd("BufEnter", {
