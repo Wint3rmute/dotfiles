@@ -179,7 +179,7 @@ lvim.plugins = {
     config = function()
       require('material').setup({
         disable = {
-          background = true
+          background = false
         }
       })
     end
