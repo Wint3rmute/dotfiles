@@ -18,7 +18,7 @@ lvim.log.level = "warn"
 -- lvim.format_on_save = false
 lvim.format_on_save = true
 -- lvim.format_on_save = false
-lvim.colorscheme = "material"
+-- lvim.colorscheme = "material"
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
@@ -179,10 +179,11 @@ lvim.plugins = {
     config = function()
       require('material').setup({
         disable = {
-          background = false
+          background = true
         }
       })
-    end
+      vim.cmd 'colorscheme material'
+    end,
   },
   { "norcalli/nvim-colorizer.lua" },
 }
