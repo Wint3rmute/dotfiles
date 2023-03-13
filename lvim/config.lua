@@ -15,10 +15,9 @@ lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
 -- general
 lvim.log.level = "warn"
--- lvim.format_on_save = false
 lvim.format_on_save = true
 -- lvim.format_on_save = false
--- lvim.colorscheme = "material"
+
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 -- add your own keymapping
@@ -45,7 +44,7 @@ local hostname = os.capture("cat /etc/hostname")
 
 if hostname == "wint3rmute.satrevolution"
 then
-  vim.o.guifont = "Fira Code:h8.9"
+  vim.o.guifont = "Fira Code:h12.9"
 end
 
 if hostname == "arch553ve"
@@ -175,31 +174,16 @@ formatters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
-  { "marko-cerovac/material.nvim",
-    config = function()
-      require('material').setup({
-        disable = {
-          background = true
-        }
-      })
-      vim.cmd 'colorscheme material'
-    end,
-  },
+  { "marko-cerovac/material.nvim"},
   { "norcalli/nvim-colorizer.lua" },
 }
 
--- vim.api.nvim_create_autocmd("BufEnter", {
---   pattern = { "*.py" },
---   callback = function()
---     local cov = require("coverage")
---     cov.setup({
---       coverage_file = "coverage.json"
---     })
+require('material').setup({
+  disable = {
+    background = true
+  },
+  async_loading = false, -- Load parts of the theme asyncronously for faster startup (turned on by default)
+})
 
---     cov.load(true)
+lvim.colorscheme = "material"
 
---     -- vim.defer_fn(function()
---     --   cov.show()
---     -- end, 500)
---   end
--- })
