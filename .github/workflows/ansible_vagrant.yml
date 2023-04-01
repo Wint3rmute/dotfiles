@@ -1,0 +1,15 @@
+
+name: Test
+on: [push]
+jobs:
+  arch-vm-provision:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Provision VM
+        run: |
+          brew install ansible
+          vagrant up
+          sleep 5
+          vagrant destroy --force
+

@@ -1,0 +1,51 @@
+---
+- hosts: localhost
+  name: Setup Arch
+  become: false
+  tasks:
+    - name: Install packages
+      become: true
+      community.general.pacman:
+        name:
+          - neovim
+          - firefox
+          - arandr
+          - kitty
+          - lxappearance
+          - transmission-cli
+          - sd
+          - ripgrep
+          - fd
+          - git
+          - base-devel
+          - poetry
+        state: present
+
+    - name: Checkout .themes repository
+      ansible.builtin.git:
+        repo: 'https://github.com/Wint3rmute/.themes.git'
+        dest: ~/.themes
+        version: master
+        pull: true
+
+    - name: Create the ~/code directory
+      ansible.builtin.file:
+        path: ~/code
+        state: directory
+
+    - name: Clone Paru
+      ansible.builtin.git:
+        repo: https://aur.archlinux.org/paru.git
+        dest: /home/wint3rmute/code/paru
+        version: master
+      notify: Build Paru
+    
+    - name: Flush handlers
+      meta: flush_handlers
+
+  handlers:
+    - name: Build Paru
+      become: false
+      ansible.builtin.command:
+        chdir: /home/wint3rmute/code/paru/
+        cmd: makepkg -sri
