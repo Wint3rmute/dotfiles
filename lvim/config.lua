@@ -82,8 +82,8 @@ end
 -- }
 
 -- Use which-key to add extra bindings with the leader-key prefix
-lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
-lvim.builtin.which_key.mappings["E"] = { "<cmd>PathfinderExplain<CR>", "Pathfinder explain" }
+lvim.builtin.which_key.mappings["P"]                = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["E"]                = { "<cmd>PathfinderExplain<CR>", "Pathfinder explain" }
 
 -- TODO: User Config for predefined plugins
 -- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
@@ -95,7 +95,7 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.terminal.open_mapping                  = "<c-t>"
 
 -- if you don't want all the parsers change this to a table of the ones you want
-lvim.builtin.treesitter.ensure_installed = {
+lvim.builtin.treesitter.ensure_installed            = {
   "bash",
   "c",
   "javascript",
@@ -110,8 +110,8 @@ lvim.builtin.treesitter.ensure_installed = {
   "yaml",
 }
 
-lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enabled = true
+lvim.builtin.treesitter.ignore_install              = { "haskell" }
+lvim.builtin.treesitter.highlight.enabled           = true
 
 -- generic LSP settings
 
@@ -139,7 +139,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- end
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
-local formatters = require "lvim.lsp.null-ls.formatters"
+local formatters                                    = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "black", filetypes = { "python" } },
   { command = "isort", filetypes = { "python" } },
@@ -174,7 +174,7 @@ formatters.setup {
 
 -- Additional Plugins
 lvim.plugins = {
-  { "marko-cerovac/material.nvim"},
+  { "marko-cerovac/material.nvim" },
   { "norcalli/nvim-colorizer.lua" },
 }
 
@@ -186,4 +186,3 @@ require('material').setup({
 })
 
 lvim.colorscheme = "material"
-
