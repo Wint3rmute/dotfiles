@@ -6,7 +6,10 @@ source ~/.cache/starship/init.nu
 
 alias pin = poetry install
 alias psh = poetry shell
+
 alias g = git
+alias gst = git status
+alias ga = git add
 alias gaa = git add -A
 alias gcmsg = git commit -m
 alias gp = git push
