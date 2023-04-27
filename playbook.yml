@@ -19,21 +19,31 @@
           - git
           - base-devel
           - poetry
+          - nushell
+          - starship
+          - xorg-xinit # provides startx
         state: present
+
+    - name: Set login shell of user {{ ansible_env.USER }} to `nu` with `usermod`
+      ansible.builtin.command: usermod --shell /usr/bin/nu {{ ansible_env.USER }}
+      become: true
+      changed_when: false
 
     - name: Checkout .themes repository
       ansible.builtin.git:
         repo: 'https://github.com/Wint3rmute/.themes.git'
         dest: ~/.themes
         version: master
-        pull: true
+        update: true
 
     - name: Create the ~/code directory
+      become: false
       ansible.builtin.file:
         path: ~/code
         state: directory
 
     - name: Clone Paru
+      become: false
       ansible.builtin.git:
         repo: https://aur.archlinux.org/paru.git
         dest: /home/wint3rmute/code/paru
