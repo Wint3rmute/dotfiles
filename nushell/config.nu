@@ -2,6 +2,8 @@
 #
 # version = 0.78.0
 
+if (tty) == "/dev/tty1" { exec startx }
+
 source ~/.cache/starship/init.nu
 
 alias pin = poetry install
