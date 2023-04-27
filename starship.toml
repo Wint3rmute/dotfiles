@@ -1,7 +1,6 @@
 # Don't print a new line at the start of the prompt
 add_newline = false
 
-
 # Use custom format
 format = """
 $username\
@@ -12,15 +11,11 @@ $git_branch\
 $git_commit\
 $git_state\
 $git_status\
-$python\
-$rust\
-$nix_shell\
 $memory_usage\
 $env_var\
 $cmd_duration\
 $custom\
 $jobs\
-$time\
 $status\
 $character"""
 
@@ -31,6 +26,7 @@ truncation_length = 8
 truncation_length = 35
 
 [python]
-disabled = false
-style = "green bold"
+disabled = true
 
+[rust]
+disabled = true
