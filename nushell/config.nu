@@ -16,7 +16,9 @@ alias gaa = git add -A
 alias gcmsg = git commit -m
 alias gp = git push
 alias gpf = git push --force-with-lease
-alias gl = git pul
+alias gl = git pull
+alias gsw = git switch
+alias gswc = git switch -c
 
 # External completer example
 # let carapace_completer = {|spans|
