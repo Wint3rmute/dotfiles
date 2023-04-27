@@ -17,6 +17,9 @@ let-env ENV_CONVERSIONS = {
   }
 }
 
+let-env EDITOR = lvim
+let-env VISUAL = less
+
 # Directories to search for scripts when calling source or use
 #
 # By default, <nushell-config-dir>/scripts is added
