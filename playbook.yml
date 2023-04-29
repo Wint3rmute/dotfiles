@@ -29,6 +29,11 @@
       become: true
       changed_when: false
 
+    - name: Setup starship
+      ansible.builtin.command: nu -c 'mkdir ~/.cache/starship; starship init nu | save -f ~/.cache/starship/init.nu'
+      become: false
+      changed_when: false
+
     - name: Checkout .themes repository
       ansible.builtin.git:
         repo: 'https://github.com/Wint3rmute/.themes.git'
