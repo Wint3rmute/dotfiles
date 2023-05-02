@@ -20,13 +20,13 @@ My color schema is based on those themes:
 
 ### How it looks?
 
-![Some code](screenshots/code.jpg)
+![Some code](docs/code.jpg)
 
-![Music](screenshots/music.jpg)
+![Music](docs/music.jpg)
 
-![Random stuff](screenshots/random.jpg)
+![Random stuff](docs/random.jpg)
 
-![Popups](screenshots/popups.jpg)
+![Popups](docs/popups.jpg)
 
 ### Colors
 #### Background
