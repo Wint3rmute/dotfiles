@@ -1,4 +1,10 @@
-# Dotfiles, `~/.config`
+<div align="center">
+<h1>My `~/.config` aka my <i>dotfiles</i></h1>
+
+<p>
+ <img src="docs/vim.jpg" alt="Lunarvim configuration">
+</p>
+</div>
 
 ## Gtk Theme
 
@@ -20,7 +26,6 @@ My color schema is based on those themes:
 
 ### How it looks?
 
-![Lunarvim](docs/vim.jpg)
 
 ![Music](docs/music.jpg)
 
