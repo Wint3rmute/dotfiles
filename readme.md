@@ -20,7 +20,7 @@ My color schema is based on those themes:
 
 ### How it looks?
 
-![Some code](docs/code.jpg)
+![Lunarvim](docs/vim.jpg)
 
 ![Music](docs/music.jpg)
 
