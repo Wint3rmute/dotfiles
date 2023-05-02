@@ -30,6 +30,7 @@
           - starship
           - xorg-xinit # provides startx
           - base-devel
+          - fakeroot
         state: present
 
     - name: Symlink vim to nvim
