@@ -13,6 +13,10 @@
           - kitty
           - lxappearance
           - transmission-cli
+          - bat
+          - ttf-fira-code
+          - ttf-firacode-nerd
+          - graphviz
           - sd
           - ripgrep
           - fd
@@ -23,6 +27,15 @@
           - starship
           - xorg-xinit # provides startx
         state: present
+
+    - name: Symlink vim to nvim
+      become: true
+      ansible.builtin.file:
+        src: /usr/bin/nvim
+        dest: /usr/bin/vim
+        owner: root
+        group: root
+        state: link
 
     - name: Set login shell of user {{ ansible_env.USER }} to `nu` with `usermod`
       ansible.builtin.command: usermod --shell /usr/bin/nu {{ ansible_env.USER }}
