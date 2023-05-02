@@ -19,6 +19,7 @@ let-env ENV_CONVERSIONS = {
 
 let-env EDITOR = lvim
 let-env VISUAL = less
+let-env PYTHON_KEYRING_BACKEND = keyring.backends.null.Keyring
 
 # Directories to search for scripts when calling source or use
 #
