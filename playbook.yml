@@ -17,6 +17,7 @@
           - ttf-fira-code
           - ttf-firacode-nerd
           - xclip
+          - thunar
           - flameshot
           - graphviz
           - sd
@@ -28,6 +29,7 @@
           - nushell
           - starship
           - xorg-xinit # provides startx
+          - base-devel
         state: present
 
     - name: Symlink vim to nvim
@@ -66,7 +68,7 @@
       become: false
       ansible.builtin.git:
         repo: https://aur.archlinux.org/paru.git
-        dest: /home/wint3rmute/code/paru
+        dest: ~/code/paru
         version: master
       notify: Build Paru
     
@@ -77,5 +79,5 @@
     - name: Build Paru
       become: false
       ansible.builtin.command:
-        chdir: /home/wint3rmute/code/paru/
+        chdir: ~/code/paru/
         cmd: makepkg -sri
