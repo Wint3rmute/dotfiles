@@ -1,0 +1,8 @@
+ThemeSetting(
+margin: [10, 10],
+border_width: 1,
+
+default_border_color : "#263238",
+floating_border_color : "#263238",
+focused_border_color : "#263238",
+)
