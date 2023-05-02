@@ -25,6 +25,7 @@ This repository hosts:
 | Distro | Arch Linux |
 | :-- | :-- |
 | Terminal | Kitty |
+| Font | Fira Code + ligatures |
 | Shell | Nushell |
 | Editor | LunarVim |
 | Window manager | Leftwm |
@@ -34,6 +35,11 @@ This repository hosts:
 | Notifications | Dunst |
 | PDF viewer | Zathura |
 | System monitor | Btop |
+| Aur helper | Paru |
+| File manager | Thunar |
+| Screenshots | Flameshot |
+
+... And a bunch of modern CLI utilities.
 
 ## Theme
 
