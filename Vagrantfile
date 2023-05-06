@@ -7,6 +7,7 @@ Vagrant.configure('2') do |config|
   pacman -Syu python ansible --noconfirm
   SCRIPT
   config.vm.provision 'shell', inline: script
+  config.vm.provision 'file', source: "..", destination: "$HOME/.config"
 
   config.vm.provision 'ansible' do |ansible|
     ansible.playbook = 'playbook.yml'
