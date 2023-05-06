@@ -9,6 +9,7 @@
         name:
           - neovim
           - firefox
+          - entr
           - arandr
           - kitty
           - lxappearance
