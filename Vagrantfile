@@ -3,11 +3,11 @@ Vagrant.configure('2') do |config|
   config.vm.define 'arch_vm'
   config.vm.boot_timeout = 3000
 
+  config.vm.provision 'file', source: '../', destination: '$HOME/.config/'
   script = <<-SCRIPT
   pacman -Syu python ansible --noconfirm
   SCRIPT
   config.vm.provision 'shell', inline: script
-  config.vm.provision 'file', source: "..", destination: "$HOME/.config"
 
   config.vm.provision 'ansible' do |ansible|
     ansible.playbook = 'playbook.yml'
