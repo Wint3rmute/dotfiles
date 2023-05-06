@@ -80,6 +80,16 @@
     - name: Flush handlers
       meta: flush_handlers
 
+    - name: Ensure leftwm is installed
+      become: false
+      ansible.builtin.command: paru -S leftwm --noconfirm --needed
+      changed_when: false
+
+    - name: Run leftwm check
+      become: false
+      ansible.builtin.command: leftwm check
+      changed_when: false
+
   handlers:
     - name: Build Paru
       become: false
