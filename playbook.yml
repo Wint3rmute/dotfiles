@@ -23,6 +23,7 @@
           - graphviz
           - sd
           - ripgrep
+          - duf
           - fd
           - git
           - base-devel
