@@ -32,6 +32,7 @@ This repository hosts:
 | Compositor | Picom |
 | Prompt | Starship |
 | Launcher | Rofi |
+| Multiplexer | Zellij |
 | Notifications | Dunst |
 | PDF viewer | Zathura |
 | System monitor | Btop |
