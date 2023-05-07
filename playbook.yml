@@ -12,6 +12,8 @@
           - audacity
           - entr
           - arandr
+          - mpv
+          - vlc
           - kitty
           - lxappearance
           - transmission-cli
