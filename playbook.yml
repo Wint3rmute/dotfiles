@@ -96,6 +96,11 @@
       ansible.builtin.command: leftwm check
       changed_when: false
 
+    - name: Ensure dragon-drop is installed
+      become: false
+      ansible.builtin.command: paru -S dragon-drop --noconfirm --needed
+      changed_when: false
+
   handlers:
     - name: Build Paru
       become: false
