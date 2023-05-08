@@ -9,6 +9,7 @@
         name:
           - neovim
           - firefox
+          - mediainfo
           - audacity
           - entr
           - arandr
