@@ -8,6 +8,7 @@
       community.general.pacman:
         name:
           - neovim
+          - zola
           - firefox
           - mediainfo
           - audacity
