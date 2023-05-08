@@ -17,7 +17,8 @@ let-env ENV_CONVERSIONS = {
   }
 }
 
-let-env EDITOR = lvim
+let-env EDITOR = nvim
+let-env GIT_EDITOR = nvim
 let-env VISUAL = less
 let-env PYTHON_KEYRING_BACKEND = keyring.backends.null.Keyring
 

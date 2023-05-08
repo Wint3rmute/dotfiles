@@ -22,6 +22,7 @@ alias gpf = git push --force-with-lease
 alias gl = git pull
 alias gsw = git switch
 alias gswc = git switch -c
+alias grbi = git rebase -i
 
 # External completer example
 # let carapace_completer = {|spans|
