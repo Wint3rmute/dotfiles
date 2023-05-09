@@ -11,6 +11,7 @@ alias psh = poetry shell
 
 alias confedit = lvim ~/.config/playbook.yml
 alias confapply = nu -c "cd ~/.config; ansible-playbook playbook.yml --ask-become-pass"
+alias confpull = nu -c "cd ~/.config; git pull -r"
 
 alias g = git
 alias gst = git status
