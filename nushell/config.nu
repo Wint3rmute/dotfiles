@@ -14,6 +14,7 @@ alias confapply = nu -c "cd ~/.config; ansible-playbook playbook.yml --ask-becom
 alias confpull = nu -c "cd ~/.config; git pull -r"
 
 alias g = git
+alias gcl = git clone
 alias gst = git status
 alias ga = git add
 alias gaa = git add -A
@@ -23,6 +24,7 @@ alias gpf = git push --force-with-lease
 alias gl = git pull
 alias gsw = git switch
 alias gswc = git switch -c
+alias grb = git rebase
 alias grbi = git rebase -i
 
 # External completer example
