@@ -19,6 +19,8 @@
           - kitty
           - lxappearance
           - transmission-cli
+          - zathura
+          - zathura-pdf-mupdf
           - bat
           - ttf-fira-code
           - ttf-firacode-nerd
