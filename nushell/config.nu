@@ -13,6 +13,9 @@ alias confedit = lvim ~/.config/playbook.yml
 alias confapply = nu -c "cd ~/.config; ansible-playbook playbook.yml --ask-become-pass"
 alias confpull = nu -c "cd ~/.config; git pull -r"
 
+alias jbl = nu -c "bluetoothctl power on; bluetoothctl connect 04:21:44:BB:CF:60"
+alias bose = nu -c "bluetoothctl power on; bluetoothctl connect 4C:87:5D:FD:7E:69"
+
 alias g = git
 alias gcl = git clone
 alias gst = git status
