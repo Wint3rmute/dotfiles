@@ -9,6 +9,7 @@
         name:
           - neovim
           - zola
+          - wget
           - firefox
           - mediainfo
           - audacity
