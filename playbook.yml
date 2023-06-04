@@ -8,8 +8,10 @@
       community.general.pacman:
         name:
           - neovim
+          - neofetch
           - tumbler
           - ffmpegthumbnailer
+          - tldr
           - zola
           - wget
           - firefox
