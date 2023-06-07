@@ -8,6 +8,7 @@
       community.general.pacman:
         name:
           - neovim
+          - jq
           - neofetch
           - tumbler
           - ffmpegthumbnailer
@@ -18,6 +19,7 @@
           - mediainfo
           - audacity
           - entr
+          - pavucontrol
           - arandr
           - mpv
           - vlc
