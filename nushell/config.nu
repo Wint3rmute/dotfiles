@@ -29,6 +29,8 @@ alias gsw = git switch
 alias gswc = git switch -c
 alias grb = git rebase
 alias grbi = git rebase -i
+alias grbc = git rebase --continue
+alias grba = git rebase --abort
 
 # External completer example
 # let carapace_completer = {|spans|
