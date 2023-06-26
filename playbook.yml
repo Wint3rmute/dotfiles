@@ -18,6 +18,8 @@
           - wget
           - firefox
           - mediainfo
+          - sl
+          - lolcat
           - audacity
           - entr
           - pavucontrol
