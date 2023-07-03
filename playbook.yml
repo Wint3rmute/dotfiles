@@ -10,8 +10,10 @@
           - neovim
           - jq
           - neofetch
+          - thunar
           - tumbler
           - ffmpegthumbnailer
+          - file-roller  # archive viewer
           - tldr
           - zola
           - bind # provides dig
@@ -37,7 +39,6 @@
           - xclip
           - gedit
           - zellij
-          - thunar
           - flameshot
           - redshift
           - graphviz
