@@ -58,12 +58,15 @@ config.colors = {
 
 config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font "Fira Code"
+-- config.font =
+--   wezterm.font('Fira Code', { weight = 'Normal', italic = false })
+
 config.font_size = 10.9
 
 config.window_padding = {
-  left = 0,
-  right = 0,
-  top = 0,
+  left = 5,
+  right = 5,
+  top = 5,
   bottom = 0,
 }
 
