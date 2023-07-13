@@ -147,6 +147,7 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
+  { "rhysd/conflict-marker.vim" }
 }
 
 require('material').setup({
