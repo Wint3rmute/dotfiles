@@ -24,7 +24,7 @@ This repository hosts:
 
 | Distro | Arch Linux |
 | :-- | :-- |
-| Terminal | Kitty |
+| Terminal | Wezterm |
 | Font | Fira Code + ligatures |
 | Shell | Nushell |
 | Editor | LunarVim |
