@@ -60,6 +60,7 @@ config.hide_tab_bar_if_only_one_tab = true
 config.font = wezterm.font "Fira Code"
 -- config.font =
 --   wezterm.font('Fira Code', { weight = 'Normal', italic = false })
+config.window_close_confirmation = "NeverPrompt"
 
 config.font_size = 10.9
 
