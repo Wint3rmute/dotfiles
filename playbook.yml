@@ -18,6 +18,7 @@
           - zola
           - bind # provides dig
           - wget
+          - gnu-netcat
           - firefox
           - mediainfo
           - sl
