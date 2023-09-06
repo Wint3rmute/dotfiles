@@ -32,6 +32,7 @@ alias grbi = git rebase -i
 alias grbc = git rebase --continue
 alias grba = git rebase --abort
 alias docker-compose = sl
+alias btop = btop --utf-force
 
 # External completer example
 # let carapace_completer = {|spans|
