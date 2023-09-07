@@ -34,6 +34,8 @@ alias grba = git rebase --abort
 alias docker-compose = sl
 alias btop = btop --utf-force
 
+def fuck [] = { thefuck (history | last 1 | get command.0) }
+
 # External completer example
 # let carapace_completer = {|spans|
 #     carapace $spans.0 nushell $spans | from json
