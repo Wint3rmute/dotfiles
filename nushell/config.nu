@@ -41,6 +41,12 @@ def fuck [] = { thefuck (history | last 1 | get command.0) }
 #     carapace $spans.0 nushell $spans | from json
 # }
 
+let fish_completer = {|spans|
+    fish --command $'complete "--do-complete=($spans | str join " ")"'
+    | $"value(char tab)description(char newline)" + $in
+    | from tsv --flexible --no-infer
+}
+
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
   # true or false to enable or disable the welcome banner at startup
@@ -136,7 +142,7 @@ $env.config = {
     external: {
       enable: true # set to false to prevent nushell looking into $env.PATH to find more suggestions, `false` recommended for WSL users as this look up my be very slow
       max_results: 100 # setting it lower can improve completion performance at the cost of omitting some options
-      completer: null # check 'carapace_completer' above as an example
+      completer: $fish_completer # check 'carapace_completer' above as an example
     }
   }
   filesize: {
