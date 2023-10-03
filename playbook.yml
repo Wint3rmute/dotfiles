@@ -10,8 +10,10 @@
           - neovim
           - jq
           - neofetch
+          - rustup
           - thunar
           - tumbler
+          - btop
           - ffmpegthumbnailer
           - file-roller  # archive viewer
           - tldr
@@ -19,6 +21,7 @@
           - bind # provides dig
           - wget
           - gnu-netcat
+          - feh
           - firefox
           - mediainfo
           - sl
