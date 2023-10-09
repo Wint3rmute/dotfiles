@@ -22,9 +22,12 @@
           - wget
           - gnu-netcat
           - feh
+          - rofi
+          - xorg-xbacklight
           - firefox
           - mediainfo
           - sl
+          - less
           - lolcat
           - audacity
           - entr
