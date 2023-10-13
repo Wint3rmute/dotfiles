@@ -11,6 +11,7 @@
           - jq
           - neofetch
           - rustup
+          - npm # Required for pyright LSP
           - thunar
           - tumbler
           - btop
