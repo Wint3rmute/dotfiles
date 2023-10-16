@@ -25,6 +25,7 @@
           - feh
           - rofi
           - xorg-xbacklight
+          - xorg-xkill
           - firefox
           - mediainfo
           - sl
