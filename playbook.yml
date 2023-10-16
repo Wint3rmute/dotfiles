@@ -7,64 +7,65 @@
       become: true
       community.general.pacman:
         name:
-          - neovim
-          - jq
-          - neofetch
-          - rustup
-          - npm # Required for pyright LSP
-          - thunar
-          - tumbler
+          - alsa-utils # provides alsamixer
+          - arandr
+          - audacity
+          - base-devel
+          - base-devel
+          - bat
+          - bind # provides dig
           - btop
+          - duf
+          - entr
+          - fakeroot
+          - fd
+          - feh
           - ffmpegthumbnailer
           - file-roller  # archive viewer
-          - tldr
-          - zola
-          - bind # provides dig
-          - wget
-          - gnu-netcat
-          - feh
-          - rofi
-          - xorg-xbacklight
-          - xorg-xkill
           - firefox
-          - mediainfo
-          - sl
+          - fish # for fish completions inside nushell
+          - flameshot
+          - gedit
+          - git
+          - gnu-netcat
+          - graphviz
+          - jq
           - less
           - lolcat
-          - audacity
-          - entr
-          - pavucontrol
-          - arandr
-          - mpv
-          - vlc
-          - wezterm
           - lxappearance
+          - mediainfo
+          - mpv
+          - neofetch
+          - neovim
+          - npm # Required for pyright LSP
+          - nushell
+          - pavucontrol
+          - poetry
+          - redshift
+          - ripgrep
+          - rofi
+          - rustup
+          - sd
+          - sl
+          - starship
+          - thefuck
+          - thunar
+          - tldr
           - transmission-cli
-          - zathura
-          - zathura-pdf-mupdf
-          - bat
           - ttf-fira-code
           - ttf-firacode-nerd
+          - tumbler
+          - vlc
+          - wezterm
+          - wget
           - xclip
-          - gedit
-          - zellij
-          - flameshot
-          - redshift
-          - graphviz
-          - sd
-          - ripgrep
-          - alsa-utils # provides alsamixer
-          - duf
-          - fd
-          - git
-          - base-devel
-          - poetry
-          - nushell
-          - starship
+          - xorg-xbacklight
           - xorg-xinit # provides startx
-          - base-devel
-          - fakeroot
-          - fish # for fish completions inside nushell
+          - xorg-xkill
+          - zathura
+          - zathura-pdf-mupdf
+          - zellij
+          - zola
         state: present
 
     - name: Symlink vim to nvim
