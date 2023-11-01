@@ -47,6 +47,7 @@
           - rustup
           - sd
           - sl
+          - sox
           - starship
           - thefuck
           - thunar
