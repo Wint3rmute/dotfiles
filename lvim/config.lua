@@ -55,25 +55,6 @@ function os.capture(cmd, raw)
   return s
 end
 
-local hostname = os.capture("cat /etc/hostname")
-
-if hostname == "wint3rmute.satrevolution"
-then
-  vim.o.guifont = "Fira Code:h12.9"
-end
-
-if hostname == "arch553ve"
-then
-  -- vim.notify("Using config for " .. hostname, vim.log.levels.INFO, { ["title"] = "Config" })
-  vim.o.guifont = "Fira Code:h7.5"
-end
-
-if hostname == "x260"
-then
-  -- vim.notify("Using config for " .. hostname, vim.log.levels.INFO, { ["title"] = "Config" })
-  vim.o.guifont = "Fira Code:h6.2"
-end
-
 -- lvim.builtin.treesitter.ignore_install = { "haskell" }
 
 -- -- always installed on startup, useful for parsers without a strict filetype
