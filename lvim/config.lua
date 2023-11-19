@@ -10,7 +10,7 @@ vim.opt.relativenumber                                      = true
 -- general
 lvim.log.level                                              = "info"
 lvim.format_on_save                                         = {
-  enabled = true,
+  enabled = false,
   timeout = 1000,
 }
 -- to disable icons and use a minimalist setup, uncomment the following
@@ -128,7 +128,8 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
-  { "rhysd/conflict-marker.vim" }
+  { "rhysd/conflict-marker.vim" },
+  { "mfussenegger/nvim-dap" }
 }
 
 require('material').setup({
@@ -137,6 +138,36 @@ require('material').setup({
   },
   async_loading = false, -- Load parts of the theme asyncronously for faster startup (turned on by default)
 })
+
+local dap = require('dap')
+dap.adapters.c = {
+  type = 'executable',
+  command = '/usr/bin/lldb-vscode', -- adjust as needed, must be absolute path
+  name = 'lldb'
+}
+
+-- dap.configurations.c = {
+--   {
+--     name = 'Launch',
+--     type = 'lldb',
+--     request = 'launch',
+--     program = function()
+--       return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+--     end,
+--     cwd = '${workspaceFolder}',
+--     stopOnEntry = false,
+--     args = {},
+--   },
+--   {
+--     -- If you get an "Operation not permitted" error using this, try disabling YAMA:
+--     --  echo 0 | sudo tee /proc/sys/kernel/yama/ptrace_scope
+--     name = "Attach to process",
+--     -- type = 'cpp',  -- Adjust this to match your adapter name (`dap.adapters.<name>`)
+--     request = 'attach',
+--     pid = require('dap.utils').pick_process,
+--     args = {},
+--   },
+-- }
 
 lvim.colorscheme = "material"
 
