@@ -123,7 +123,7 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pylyzer" })
 
 lvim.plugins = {
   { "marko-cerovac/material.nvim" },
-  -- { "norcalli/nvim-colorizer.lua" },
+  { "norcalli/nvim-colorizer.lua" },
   {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",

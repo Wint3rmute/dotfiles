@@ -19,4 +19,4 @@ redshift 51.1:17.03 &
 
 # Set background
 feh --bg-fill ~/Pictures/wallpapers/vera.jpg &
-
+setxkbmap pl
