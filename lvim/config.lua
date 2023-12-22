@@ -10,7 +10,7 @@ vim.opt.relativenumber                                      = true
 -- general
 lvim.log.level                                              = "info"
 lvim.format_on_save                                         = {
-  enabled = false,
+  enabled = true,
   timeout = 1000,
 }
 -- to disable icons and use a minimalist setup, uncomment the following
@@ -35,7 +35,7 @@ lvim.builtin.alpha.active                                   = true
 lvim.builtin.alpha.mode                                     = "dashboard"
 
 lvim.builtin.terminal.active                                = true
-lvim.builtin.terminal.open_mapping                          = "<c-t>"
+lvim.builtin.terminal.open_mapping                          = "<c-\\>"
 
 lvim.builtin.nvimtree.setup.view.side                       = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git         = false
