@@ -54,6 +54,7 @@
         (command: Execute, value: "~/code/scripts/volume down", modifier: [], key: "XF86XK_AudioLowerVolume"),
         (command: Execute, value: "rofi -show drun", modifier: ["modkey"], key: "d"),
         (command: Execute, value: "~/.config/scripts/pdf_db.sh", modifier: ["modkey"], key: "p"),
+        (command: Execute, value: "~/.config/scripts/sound_db.sh", modifier: ["modkey"], key: "s"),
         (command: Execute, value: "thunar", modifier: ["modkey"], key: "e"),
         (command: Execute, value: "wezterm", modifier: ["modkey"], key: "Return"),
         (command: CloseWindow, value: "", modifier: ["modkey"], key: "q"),
