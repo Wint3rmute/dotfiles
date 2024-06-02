@@ -60,7 +60,6 @@
           - wezterm
           - wget
           - xclip
-          - xorg-xbacklight
           - xorg-xinit # provides startx
           - xorg-xkill
           - zathura
