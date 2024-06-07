@@ -25,6 +25,7 @@
           - firefox
           - fish # for fish completions inside nushell
           - flameshot
+          - fzf
           - gedit
           - git
           - gnu-netcat
@@ -38,7 +39,6 @@
           - neofetch
           - neovim
           - npm # Required for pyright LSP
-          - nushell
           - pavucontrol
           - poetry
           - redshift
@@ -66,6 +66,7 @@
           - zathura-pdf-mupdf
           - zellij
           - zola
+          - zoxide
         state: present
 
     - name: Symlink vim to nvim
@@ -86,15 +87,15 @@
         group: "{{ ansible_env.USER }}"
         state: link
 
-    - name: Set login shell of user {{ ansible_env.USER }} to `nu` with `usermod`
-      ansible.builtin.command: usermod --shell /usr/bin/nu {{ ansible_env.USER }}
+    - name: Set login shell of user {{ ansible_env.USER }} to `zsh` with `usermod`
+      ansible.builtin.command: usermod --shell /usr/bin/zsh {{ ansible_env.USER }}
       become: true
       changed_when: false
 
-    - name: Setup starship
-      ansible.builtin.command: nu -c 'mkdir ~/.cache/starship; starship init nu | save -f ~/.cache/starship/init.nu'
-      become: false
-      changed_when: false
+    - name: Setup .zshrc
+      ansible.builtin.copy:
+        src: .zshrc
+        dest: ~/.zshrc
 
     - name: Create the ~/code directory
       become: false

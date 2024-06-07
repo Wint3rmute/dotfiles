@@ -29,7 +29,7 @@ This repository hosts:
 | :-- | :-- |
 | Terminal | Wezterm |
 | Font | Fira Code + ligatures |
-| Shell | Nushell (+ Fish's completions) |
+| Shell | Zsh (+ Zoxide) |
 | Editor | LunarVim |
 | Window manager | Leftwm |
 | Compositor | Picom |
