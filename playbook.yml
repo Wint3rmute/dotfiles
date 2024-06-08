@@ -67,6 +67,7 @@
           - zellij
           - zola
           - zoxide
+          - zsh
         state: present
 
     - name: Symlink vim to nvim
@@ -78,6 +79,8 @@
         group: root
         state: link
 
+    # This simplifies theme management, as I keep both
+    # configuration and themes in the same repository
     - name: Symlink ~/.themes to ~/.config
       become: false
       ansible.builtin.file:
@@ -91,6 +94,11 @@
       ansible.builtin.command: usermod --shell /usr/bin/zsh {{ ansible_env.USER }}
       become: true
       changed_when: false
+
+    - name: Download Antigen
+      ansible.builtin.get_url:
+        url: https://git.io/antigen
+        dest: ~/.config/antigen.zsh
 
     - name: Setup .zshrc
       ansible.builtin.copy:
