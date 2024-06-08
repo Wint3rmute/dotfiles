@@ -156,7 +156,6 @@ $env.config = {
   float_precision: 2 # the precision for displaying floats in tables
   buffer_editor: "nvim" # command that will be used to edit the current line buffer with ctrl+o, if unset fallback to $env.EDITOR and $env.VISUAL
   use_ansi_coloring: true
-  edit_mode: emacs # emacs, vi
   render_right_prompt_on_last_line: false # true or false to enable or disable right prompt to be rendered on last line of the prompt.
 
   hooks: {
