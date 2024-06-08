@@ -25,9 +25,9 @@ antigen apply
 
 unalias ll
 unalias la
-alias ls=exa
-alias ll="exa -l"
-alias la="exa -a"
+alias ls="eza --icons"
+alias ll="eza -l --icons"
+alias la="eza -a --icons"
 alias psh="poetry shell"
 alias pin="poetry install"
 # alias "docker-compose"="sl"
