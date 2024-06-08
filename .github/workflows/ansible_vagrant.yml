@@ -3,13 +3,22 @@ name: Test
 on: [push]
 jobs:
   arch-vm-provision:
-    runs-on: macos-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v3
-      - name: Provision VM
+      - name: Setup Ubuntu packages
         run: |
-          brew install ansible
-          vagrant up
-          sleep 5
-          vagrant destroy --force
-
+          sudo apt update
+          docker run --name arch -d archlinux:latest sleep 3600
+      - name: Setup ansible & dependencies
+        run: |
+          docker exec arch pacman -Syu ansible sudo --noconfirm
+          docker exec arch bash -c "echo 'wint3rmute ALL=(ALL:ALL) NOPASSWD:ALL' > /etc/sudoers"
+      - name: Setup user
+        run: |
+          docker exec arch useradd -m wint3rmute
+          docker cp $(pwd) arch:/home/wint3rmute/.config
+          docker exec arch chown wint3rmute:wint3rmute /home/wint3rmute/.config
+      - name: Run provisioning
+        run: |
+          docker exec -u wint3rmute -w /home/wint3rmute/.config arch ansible-playbook -v playbook.yml

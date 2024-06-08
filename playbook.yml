@@ -3,6 +3,10 @@
   name: Setup Arch
   become: false
   tasks:
+    - name: Set a fact with the user name.
+      set_fact:
+        login_user: wint3rmute
+
     - name: Install packages
       become: true
       community.general.pacman:
@@ -10,7 +14,6 @@
           - alsa-utils # provides alsamixer
           - arandr
           - audacity
-          - base-devel
           - base-devel
           - bat
           - bind # provides dig
@@ -71,6 +74,9 @@
           - zsh
         state: present
 
+    - name: Setup rust toolchain
+      ansible.builtin.shell: rustup install stable
+
     - name: Symlink vim to nvim
       become: true
       ansible.builtin.file:
@@ -87,12 +93,12 @@
       ansible.builtin.file:
         src: ~/.config
         dest: ~/.themes
-        owner: "{{ ansible_env.USER }}"
-        group: "{{ ansible_env.USER }}"
+        owner: "{{ login_user }}"
+        group: "{{ login_user }}"
         state: link
 
-    - name: Set login shell of user {{ ansible_env.USER }} to `zsh` with `usermod`
-      ansible.builtin.command: usermod --shell /usr/bin/zsh {{ ansible_env.USER }}
+    - name: Set login shell of user {{ login_user }} to `zsh` with `usermod`
+      ansible.builtin.command: usermod --shell /usr/bin/zsh {{ login_user }}
       become: true
       changed_when: false
 
