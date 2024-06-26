@@ -37,3 +37,4 @@ export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
 export EDITOR=nvim
 
 eval "$(zoxide init zsh --cmd cd)"
+set -o vi
