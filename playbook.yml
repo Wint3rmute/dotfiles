@@ -145,6 +145,10 @@
       ansible.builtin.command: paru -S dragon-drop --noconfirm --needed
       changed_when: false
 
+    - name: Enable autoSetupRemote in git
+      ansible.builtin.command: git config --global push.autoSetupRemote true
+      changed_when: false
+
   handlers:
     - name: Build Paru
       become: false
