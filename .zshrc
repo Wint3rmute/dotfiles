@@ -38,3 +38,5 @@ export EDITOR=nvim
 
 eval "$(zoxide init zsh --cmd cd)"
 set -o vi
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
