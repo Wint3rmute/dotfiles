@@ -1,0 +1,17 @@
+theme = "base16_transparent"
+
+[editor]
+line-number = "relative"
+mouse = true
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+"0" = "goto_line_start"
+
+[keys.normal.space]
+"q" = ":quit"
+
+[keys.normal."+"]
+l = ":run-shell-command git pull -r"
