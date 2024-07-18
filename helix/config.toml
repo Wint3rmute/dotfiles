@@ -9,9 +9,15 @@ hidden = false
 
 [keys.normal]
 "0" = "goto_line_start"
+"C-r" = "redo"
+"r" = ":reflow"
+
+"}" = "goto_next_paragraph"
+"{" = "goto_prev_paragraph"
 
 [keys.normal.space]
 "q" = ":quit"
+"/" = "toggle_comments"
 
 [keys.normal."+"]
 l = ":run-shell-command git pull -r"
