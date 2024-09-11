@@ -30,7 +30,7 @@ This repository hosts:
 | Terminal | Wezterm |
 | Font | Fira Code + ligatures |
 | Shell | Zsh (+ Zoxide) |
-| Editor | LunarVim |
+| Editor | AstroVim |
 | Window manager | Leftwm |
 | Compositor | Picom |
 | Prompt | Starship |
